@@ -40,10 +40,10 @@ if(USE_CUDA)
       OUTPUT_STRIP_TRAILING_WHITESPACE
     )
 
-    if("${CUDA_CAPABILITY_VERSION}" MATCHES "^[1-11][0-11]+$")
+    if("${CUDA_CAPABILITY_VERSION}" MATCHES "^[1-9][0-9]+$")
       set(CUDA_ARCH "sm_${CUDA_CAPABILITY_VERSION}")
     else()
-      set(CUDA_ARCH "sm_86")
+      set(CUDA_ARCH "sm_52")
     endif()
   endif()
 
